@@ -1,0 +1,72 @@
+ASSUME CS:CODE,DS:DATA
+
+DISPLAY MACRO MSG;macro to display messages
+LEA DX,MSG
+MOV AH,09H
+INT 21H
+ENDM
+
+DATA SEGMENT
+MSG1 DB 0AH,0DH,"Enter the String:$"
+MSG2 DB 0AH,0DH,"Reverse of String:$"
+PAL DB 0AH,0DH,"The given string is a Palindrome$"
+NPAL DB 0AH,0DH,"The given string is not a Palindrome$"
+P LABEL BYTE
+M DB 0FFH
+L DB ?
+STR DB 0FFH DUP("$")
+REV DB 0FFH DUP("$")
+DATA ENDS
+
+CODE SEGMENT
+START:	MOV AX,DATA
+	MOV DS,AX
+	
+	DISPLAY MSG1;call macro
+	
+	LEA DX,P;read string
+	MOV AH,0AH
+	INT 21H
+	
+	DISPLAY MSG2;call macro
+	
+	MOV DL,L
+	ADD DL,30H
+	
+	LEA SI,STR
+	LEA DI,REV
+	
+	MOV DL,L
+	DEC DL
+	MOV DH,0
+	ADD SI,DX
+	MOV CL,L
+	MOV CH,0
+REVERSE:MOV AL,[SI]
+	MOV [DI],AL
+	INC DI
+	DEC SI
+	LOOP REVERSE
+	
+	DISPLAY REV;call macro
+	
+	LEA SI,STR
+	LEA DI,REV
+	
+	MOV CL,L
+	MOV CH,0
+CHECK:	MOV AL,[SI]
+	CMP [DI],AL
+	JNE NOTPAL;jump to notpal if not equal
+	INC SI
+	INC DI
+	LOOP CHECK
+	
+	DISPLAY PAL;call macro
+	
+	JMP EXIT;jump to exit
+NOTPAL:DISPLAY NPAL;call macro
+EXIT:	MOV AH,4CH;to terminate program
+	INT 21H
+CODE ENDS
+END START
