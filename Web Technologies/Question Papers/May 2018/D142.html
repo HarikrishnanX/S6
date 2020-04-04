@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>D 14 2</title>
+        <script>
+                var d,a,b,c,ans1,ans2,retval;
+                a=parseInt(prompt("Enter the Coefficient of x^2:"));
+                b=parseInt(prompt("Enter the Coefficient of x:"));
+                c=parseInt(prompt("Enter the Constant:"));
+                retval=confirm("Do you want to continue?");
+                if(retval==true){
+                    d=(b*b)-(4*a*c);
+                    if(d>0){
+                        ans1=((-b)+Math.sqrt(d))/(2*a);
+                        ans2=((-b)-Math.sqrt(d))/(2*a);
+                    }
+                    else if(d==0){
+                        ans1=(-b)/(2*a);
+                        ans2=ans1;
+                    }
+                    else{
+                        ans1="Imaginary value";
+                        ans2="Imaginary value";
+                    }
+                    document.write("x="+ans1);
+                    document.write("x="+ans2);
+                }
+        </script>
+    </head>
+    <body>
+        <h2>Javascript Program to Solve a Quadratic Equation</h2>
+    </body>
+</html>
