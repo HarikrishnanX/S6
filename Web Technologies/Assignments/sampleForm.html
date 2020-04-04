@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sample Form</title>
+        <script>
+            function validate_fname(){
+                var fn,text;
+                fn=sample.fname.value;
+                if(fn.length==0){
+                    text="Invalid First Name!!";
+                    text=text.fontcolor("red");
+                    document.getElementById("firstname").innerHTML=text;
+                }         
+            }
+            function validate_lname(){
+                var ln,text;
+                ln=sample.lname.value;
+                if(ln.length==0){
+                    text="Invalid Last Name!!";
+                    text=text.fontcolor("red");
+                    document.getElementById("lastname").innerHTML=text;
+                }         
+            }
+            function validate_email(){
+                var em,text;
+                em=document.getElementById("mail");
+                if(!em.checkValidity()){
+                    text="Invalid Email!!";
+                    text=text.fontcolor("red");
+                    document.getElementById("email").innerHTML=text;
+                }         
+            }
+            function validate_userid(){
+                var urid,text;
+                urid=sample.uid.value;
+                if(urid.length==0){
+                    text="Invalid User ID!!";
+                    text=text.fontcolor("red");
+                    document.getElementById("userid").innerHTML=text;
+                }
+            }
+            function validate_password(){
+                var p,cp,text;
+                p=sample.pass.value;
+                cp=sample.confpass.value;
+                if(p!=cp){
+                    text="Passwords do not Match!!";
+                    text=text.fontcolor("red");
+                    document.getElementById("confirmpassword").innerHTML=text;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Sample Form Program using Javascript</h2>
+        <p style="color: red;">All fields marked with * are mandatory.</p>
+        <form name="sample" action="action.html">
+            * First Name: <input type="text" name="fname" id="fname" onblur="validate_fname()"/> <span id="firstname"></span><br><br>
+            * Last Name: <input type="text" name="lname" id="lname" onblur="validate_lname()"/> <span id="lastname"></span><br><br>
+            * Email: <input type="email" name="mail" id="mail" onblur="validate_email()"/> <span id="email"></span><br><br>
+            * User ID: <input type="text" name="uid" id="uid" onblur="validate_userid()"/> <span id="userid"></span><br><br>
+            * Password: <input type="password" name="pass" id="pass"/><span id="password"> </span><br><br>
+            * Confirm Password: <input type="password" name="confpass" id="confpass" onblur="validate_password()"/> <span id="confirmpassword"></span><br><br>
+            <input type="submit" value="Submit"/>
+        </form>
+    </body>
+</html>

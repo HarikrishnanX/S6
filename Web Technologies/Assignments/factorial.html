@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Factorial</title>
+        <script>
+            function getFactorial(){
+                var i,num,fact=1;
+                num=Number(document.getElementById("number").value);
+                for(i=1;i<=num;i++){
+                    fact*=i;
+                }
+                document.getElementById("answer").value=fact;
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Javascript Program to find Factorial of a Number</h2>
+        Enter the Number: <input id="number">
+        <br><br>
+        <button onclick="getFactorial()">Find Factorial</button>
+        <br><br>
+        Factorial: <input id="answer">
+    </body>
+</html>

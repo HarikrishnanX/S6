@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="stud.xsl"?>
+<students>
+    <student>
+        <roll_no>1</roll_no>
+        <name>Abhijith G Anil</name>
+        <branch>CS</branch>
+    </student>
+    <student>
+        <roll_no>27</roll_no>
+        <name>Harikrishnan V</name>
+        <branch>CS</branch>
+    </student>
+    <student>
+        <roll_no>38</roll_no>
+        <name>Megha K C</name>
+        <branch>CS</branch>
+    </student>
+    <student>
+        <roll_no>41</roll_no>
+        <name>Priyanga P Kini</name>
+        <branch>CS</branch>
+    </student>
+    <student>
+        <roll_no>55</roll_no>
+        <name>Srividya Krishnakumar</name>
+        <branch>CS</branch>
+    </student>
+</students>

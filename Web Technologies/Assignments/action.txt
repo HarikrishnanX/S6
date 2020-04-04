@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Action Page</title>
+    </head>
+    <body>
+        <h2>Thank You Very Much</h2>
+        <p>You have submitted the following details:</p>
+        <ul>
+            <li>First Name</li>
+            <li>Last Name</li>
+            <li>Email</li>
+            <li>User ID</li>
+            <li>Password</li>
+        </ul>
+    </body>
+</html>
