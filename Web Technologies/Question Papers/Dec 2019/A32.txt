@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A 3 2</title>
+    </head>
+    <body>
+        <a href="www.mysite.com/birds.jpg">Click Here</a>
+    </body>
+</html>

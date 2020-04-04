@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>B 6 1</title>
+    </head>
+    <body>
+        <form method="POST" action="http://responses.mysite.com">
+            Text: <input type="text" maxlength="25">
+            <input type="radio" value="1">1
+            <input type="radio" value="2">2
+            <input type="radio" value="3">3
+            <select name="s" size="2">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
